@@ -167,6 +167,8 @@ function calcPGS(){
   var Lg = (m-1)*s + d;
   var equivDepth = (2/3)*L;
 
+  if(window.JRH && JRH.saveOutput) JRH.saveOutput({Bg_mm:Bg, Lg_mm:Lg, equivDepth_mm:equivDepth});
+
   var res = document.getElementById('pgs-result');
   res.innerHTML =
     '<table><tr><th>項目</th><th>數值</th></tr>'+
